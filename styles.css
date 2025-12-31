@@ -400,9 +400,10 @@ footer { margin-top: 24px; text-align: center; color: var(--text-secondary); fon
 }
 
 .hero-social {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 5rem; /* ✅ space reserved for scroll indicator */
 }
 
 .social-link {
@@ -425,25 +426,29 @@ footer { margin-top: 24px; text-align: center; color: var(--text-secondary); fon
 }
 
 .scroll-indicator {
-	bottom: 1vh;
-	left: 47%;
-	transform: translateX(-50%);
+    position: absolute;              /* removes it from normal flow */
+    bottom: 2rem;                    /* anchor near bottom */
+    left: 46.5%;
+    transform: translateX(-50%);     /* perfect center */
+
     z-index: 40;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.5rem;
-	color: var(--text-muted);
-	font-size: 0.75rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	animation: bounce 1.5s infinite;
-	transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    animation: bounce 1.5s infinite;
+    transition: var(--transition);
 }
 
 .scroll-indicator:hover {
-	color: var(--primary);
+    color: var(--primary);
 }
 
 /* =========================
@@ -1374,7 +1379,14 @@ footer p {
 
 }
 
-
+#preloader{
+    background: #000 url(images/loader.gif) no-repeat center;
+    background-size: 50%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 
 
 
