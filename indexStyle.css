@@ -46,4 +46,31 @@ html, body {
   border: 2px solid white;
   padding: 25px 50px;
   border-radius: 50px;
+  background-color: transparent; /* Ensure it starts transparent */
+  transition: all 0.3s ease;     /* This makes the color change smooth */
+}
+
+/* The Hover State */
+.content a:hover {
+  background-color: white;       /* Background turns white */
+  color: black;                  /* Text turns black */
+}
+@media screen and (max-width: 768px) {
+  .content h1 {
+    font-size: 48px;       /* Smaller font for mobile screens */
+    margin-bottom: 30px;
+    padding: 0 20px;       /* Prevents text from hitting screen edges */
+    line-height: 1.2;
+  }
+
+  .content a {
+    font-size: 18px;       /* Slightly smaller button text */
+    padding: 15px 35px;    /* Smaller button padding */
+  }
+
+  /* Optional: Ensuring the video stays centered on small screens */
+  .background-clip {
+    width: 100%;
+    height: 100%;
+  }
 }
